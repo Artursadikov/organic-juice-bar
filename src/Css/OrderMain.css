@@ -1,0 +1,192 @@
+.order-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.menu-container {
+    width: 33%;
+    border-right: 3px solid whitesmoke;
+}
+
+.glass-container {
+    width: 67%;
+}
+
+.menu-title {
+    width: 150px;
+    font-weight: bold;
+    border-bottom: 3px solid orange;
+    text-align: center;
+    margin: 15px auto;
+    color: #fca311;
+}
+
+.amount-ing-container {
+    /* border: 2px solid #fca311; */
+    border-radius: 5px;
+    width: 76%;
+    height: 10%;
+    margin: auto;
+}
+
+.cupSize {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+    color: #fca311;
+}
+
+.cup-btn {
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.loading {
+    margin: auto;
+    text-align: center;
+    color: #fca311;
+}
+
+.size-btns {
+    border: 2px solid #fca311;
+    color: #fca311;
+    width: 33%;
+    height: 30px;
+    margin: 0 5px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.size-btns:hover {
+    font-size: 120%;
+    transition: all .5s;
+}
+
+.ing-container {
+    border: 2px solid #fca311;
+    border-radius: 10px;
+    width: 80%;
+    height: 50%;
+    margin: 10px auto;
+    display: block;
+    overflow: auto;
+}
+
+.ingredient {
+    margin-top: 2px;
+    width: 99%;
+    height: 55px;
+    display: flex;
+    border-radius: 5px;
+}
+
+.ing-type {
+    width: 80%;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 15px;
+}
+
+.ing-type:hover {
+    transition: all 0.5s;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.ing-price {
+    width: 20%;
+    text-align: center;
+    background-color: rgba(250, 250, 250, 0.472) !important;
+    padding-top: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.ing-price:hover {
+    transition: all 0.5s ease-out;
+    width: 40%;
+    font-weight: bold;
+    background-color: rgba(250, 250, 250, 0.876) !important;
+}
+
+.buttons-container {
+    width: 98%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-Shake, .btn-Clear {
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #fca311;
+    color: #fca311;
+    width: 40%;
+    height: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+}
+
+.btn-Shake:hover, .btn-Clear:hover {
+    font-size: 25px;
+    transition: all .5s;
+}
+
+.glass-container {
+    width: 67%;
+}
+
+.total-price {
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 90%;
+    height: 70px;
+    background-color: whitesmoke;
+    border: 2px solid #fca311;
+    color: black;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-transform: capitalize;
+    font-size: 80%;
+}
+
+.amount-of-ings-to-pick {
+    margin: auto;
+    color: #fca311;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+    height: 25px;
+}
+
+.back-btn {
+    width: 75px;
+    height: 25px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: #fca311;
+    display: inline;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    color: rgba(250, 250, 250, 0.876);
+    background-color: #fca311;
+    transition: all .5s;
+    border: 2px solid #fca311;
+    border-radius: 5px;
+}

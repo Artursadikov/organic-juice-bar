@@ -1,0 +1,69 @@
+.login-modal {
+    width: 40%;
+    height: 80vh;
+    border: 2px solid #fca311;
+    border-radius: 5px;
+    margin: auto;
+    position: relative;
+    top: 55px;
+}
+
+.h1-login {
+    text-align: center;
+    color: #fca311;
+    margin: 15px auto;
+}
+
+
+
+.email-input, .password-input  {
+   width: 350px;
+   height: 30px;
+   display: block;
+   margin: 30px auto;
+   text-align: center;
+}
+
+.error-div {
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid red;
+    width: 350px;
+    height: 100px;
+    color: whitesmoke;
+}
+.btn-submit {
+    margin: 50px auto;
+    text-align: center;
+    border: 2px solid #fca311;
+    border-radius: 5px;
+    display: block;
+    width: 150px;
+    height: 35px;
+    background-color: transparent;
+    color: #fca311;
+}
+
+.back-btn-login {
+    width: 75px;
+    height: 25px;
+    margin-top: 50px;
+    margin-left: 5px;
+    color: #fca311;
+    display: inline;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.back-btn-login:hover {
+    color: rgba(250, 250, 250, 0.876);
+    background-color: #fca311;
+    transition: all .5s;
+    border: 2px solid #fca311;
+    border-radius: 5px;
+}

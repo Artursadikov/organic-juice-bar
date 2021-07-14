@@ -1,6 +1,7 @@
 import firebase from "firebase";
+import "firebase/auth";
 
-firebase.initializeApp({
+ firebase.initializeApp({
     apiKey: "AIzaSyCzdcwIwHFC2kIYspcBx0oQofrKkHeVzX8",
       authDomain: "organic-juice-bar.firebaseapp.com",
       projectId: "organic-juice-bar",
@@ -9,6 +10,5 @@ firebase.initializeApp({
       appId: "1:1001173368202:web:87b2e81077c31a1f9ddc73",
       measurementId: "G-LMESBPKSKH"
   });
-
 
   export default firebase;

@@ -190,3 +190,51 @@
     border: 2px solid #fca311;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 810px) {
+    .menu-container {
+        width: 40%;
+    }
+    .glass-container {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menu-container {
+        width: 45%;
+    }
+    .glass-container {
+        width: 55%;
+    }
+    .size-btns {
+        width:33%;
+        height: 30px;
+        margin: 0 1px;
+        font-size:80%;
+    }
+    .size-btns:hover {
+        font-size:80%;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .amount-of-ings-to-pick {
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .menu-container {
+        width: 50%;
+    }
+    .glass-container {
+        width: 50%;
+    }
+    .back-btn {
+
+        font-size: 20px;
+      
+    }
+}

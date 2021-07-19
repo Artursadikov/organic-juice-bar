@@ -1,15 +1,17 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useHistory } from "react-router-dom";
 import "../Css/OrderMain.css";
 import axios from "axios";
 import Ingredient from '../Components/Ingredient';
 import Glass from "../Components/Glass";
+import { AuthContext } from '../Auth';
 
 
 export default function OrderMain(props) {
     let history = useHistory();
 
+    const { currentUser } = useContext(AuthContext);
     const [bigButton, setBigButton] = useState(true);
     const [mediumButton, setMediumButton] = useState();
     const [smallButton, setSmallButton] = useState();
@@ -23,7 +25,9 @@ export default function OrderMain(props) {
 
     useEffect(() => {
         fetchIngs();
-
+        if (!currentUser) {
+            history.push("/");
+        }
     }, [])
 
 
@@ -72,7 +76,7 @@ export default function OrderMain(props) {
             setMediumButton(false);
             setSmallButton(false);
             setChooseText('Choose four ingredients');
-        },3000);
+        }, 3000);
         setShake(!shake);
     }
     const onClearBtn = () => {
@@ -130,7 +134,7 @@ export default function OrderMain(props) {
             }
         }
 
-        
+
     }
 
 

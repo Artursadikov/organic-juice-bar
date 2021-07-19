@@ -67,3 +67,35 @@
     border: 2px solid #fca311;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 420px) {
+    .login-modal {
+        width: 80%;
+       
+    }
+
+    .email-input, .password-input  {
+        width: 300px;
+       
+     }
+
+     .error-div {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .login-modal {
+        width: 80%;
+       
+    }
+
+    .email-input, .password-input  {
+        width: 300px;
+       
+     }
+
+     .error-div {
+        width: 300px;
+    }
+}

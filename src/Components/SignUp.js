@@ -7,7 +7,8 @@ export default function SignUp() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const [error, setError] = useState(false);
+    const [errorMsg, setErrorMsg] = useState("");
 
     let history = useHistory();
 
@@ -22,13 +23,15 @@ export default function SignUp() {
     const onSubmit = (e) => {
         e.preventDefault();
         firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(()=>{
-            setEmail('');
-            setPassword('');
-        })
-        .catch((error) => {
-            alert(error);
-        })
+            .then(() => {
+                setEmail('');
+                setPassword('');
+                history.push("/order-main");
+            })
+            .catch((err) => {
+                setError(true);
+                setErrorMsg('Somthing went wrong: ' + err.message);
+            })
 
     }
 
@@ -43,9 +46,15 @@ export default function SignUp() {
             <h1 className="h1-sign">Sign Up</h1>
             <input value={email} onChange={onEmailHandler} placeholder="Email" type="email" className="email-input" />
             <input value={password} onChange={onPasswordHandler} placeholder="Password" type="password" className="password-input" />
-            <div className="error-div">
-                errors
-            </div>
+            {error ?
+                <div className="error-div">
+                    {errorMsg}
+                </div>
+                :
+                <div style={{opacity:"0"}} className="error-div">
+                    {errorMsg}
+                </div>
+            }
             <input type="submit" className="btn-submit" />
             <button onClick={goToMainPage} className="back-btn-login">{'<= Back'}</button>
         </form>

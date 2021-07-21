@@ -22,6 +22,7 @@ export default function OrderMain(props) {
     const [chooseText, setChooseText] = useState("Choose four ingredients");
     const [totalPrice, setTotalPrice] = useState(0);
     const [loaded, setLoaded] = useState(false);
+    const [thank, setThank] = useState(false);
 
     useEffect(() => {
         //get ingredients from firebase
@@ -36,10 +37,10 @@ export default function OrderMain(props) {
         fetchIngs();
         if (!currentUser) {
             history.push("/");
-           
-        } 
 
-    }, [currentUser,history])
+        }
+
+    }, [currentUser, history])
 
 
 
@@ -78,8 +79,16 @@ export default function OrderMain(props) {
             setMediumButton(false);
             setSmallButton(false);
             setChooseText('Choose four ingredients');
-        }, 3000);
+            setTimeout(() => {
+                setTimeout(() => {
+                    setThank(false)
+                    history.push("/");
+                }, 1500)
+            }, 1500);
+            setThank(true)
+        }, 2000);
         setShake(!shake);
+
     }
     const onClearBtn = () => {
         setIngArr([]);
@@ -89,6 +98,7 @@ export default function OrderMain(props) {
         setMediumButton(false);
         setSmallButton(false);
         setChooseText('Choose four ingredients');
+        setThank(false)
     }
 
     //back to home btns
@@ -196,7 +206,7 @@ export default function OrderMain(props) {
                     ColorArr={newColorArr}
                     newIngArr={newIngArr}
                     shake={shake}
-
+                    thank={thank}
                 />
             </div>
         </section >

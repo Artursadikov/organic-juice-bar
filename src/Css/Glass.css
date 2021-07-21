@@ -111,6 +111,12 @@
   transform: translateZ(0);
 }
 
+.thanks {
+  text-align: center;
+  color: #fca311;
+  font-size: 200%;
+}
+
 @-webkit-keyframes load4 {
   0%, 100% {
     box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
@@ -169,7 +175,6 @@
   .glass-one, .glass-two, .glass-three {
     width: 250px;
     height: 550px;
-
   }
   .glass-top {
     height: 100px;
@@ -212,19 +217,16 @@
     transform: perspective(60px) rotateX(-5deg);
   }
   .glass-bottom-three {
-  
     height: 100px;
     width: 120px;
     transform: perspective(50px) rotateX(-5deg);
   }
-
   .glass-wrapper {
     margin: 0 auto;
     padding-top: 150px;
     width: 150px;
     height: 350px;
   }
-  
   .glass-wrapper-three {
     margin: 0 auto;
     padding-top: 100px;
@@ -237,7 +239,6 @@
   .glass-one, .glass-two, .glass-three {
     width: 180px;
     height: 550px;
-
   }
   .glass-top {
     height: 80px;
@@ -254,7 +255,6 @@
     width: 125px;
     transform: perspective(50px) rotateX(-5deg);
   }
-
   .glass-top-two {
     height: 130px;
     width: 156px;
@@ -265,9 +265,6 @@
     width: 124px;
     transform: perspective(50px) rotateX(-5deg);
   }
-
-
-
   .glass-top-three {
     height: 80px;
     width: 160px;
@@ -284,24 +281,20 @@
     transform: perspective(60px) rotateX(-5deg);
   }
   .glass-bottom-three {
-  
     height: 80px;
     width: 108px;
     transform: perspective(50px) rotateX(-5deg);
   }
-
   .glass-wrapper {
     margin: 0 auto;
     padding-top: 150px;
     width: 180px;
     height: 350px;
   }
-  
   .glass-wrapper-three {
     margin: 0 auto;
     padding-top: 100px;
     width: 180px;
     height: 350px;
   }
-
 }

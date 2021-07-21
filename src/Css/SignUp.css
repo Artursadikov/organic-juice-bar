@@ -13,3 +13,35 @@
     color: #fca311;
     margin: 15px auto;
 }
+
+@media screen and (max-width: 420px) {
+    .sign-modal  {
+        width: 80%;
+       
+    }
+
+    .email-input, .password-input  {
+        width: 300px;
+       
+     }
+
+     .error-div {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .sign-modal {
+        width: 80%;
+       
+    }
+
+    .email-input, .password-input  {
+        width: 300px;
+       
+     }
+
+     .error-div {
+        width: 300px;
+    }
+}

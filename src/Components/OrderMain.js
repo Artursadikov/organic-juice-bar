@@ -11,7 +11,7 @@ import { AuthContext } from '../Auth';
 export default function OrderMain(props) {
     let history = useHistory();
 
-    const { currentUser } = useContext(AuthContext);
+    let { currentUser } = useContext(AuthContext);
     const [bigButton, setBigButton] = useState(true);
     const [mediumButton, setMediumButton] = useState();
     const [smallButton, setSmallButton] = useState();
@@ -24,23 +24,26 @@ export default function OrderMain(props) {
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
+        //get ingredients from firebase
+        const fetchIngs = () => {
+
+            axios.get('https://organic-juice-bar-default-rtdb.firebaseio.com/ingredients.json')
+                .then((response) => {
+                    setIngredient(response.data);
+                    setLoaded(true);
+                })
+        };
         fetchIngs();
         if (!currentUser) {
             history.push("/");
-        }
-    }, [])
+           
+        } 
+
+    }, [currentUser,history])
 
 
 
-    //get ingredients from firebase
-    const fetchIngs = () => {
 
-        axios.get('https://organic-juice-bar-default-rtdb.firebaseio.com/ingredients.json')
-            .then((response) => {
-                setIngredient(response.data);
-                setLoaded(true);
-            })
-    };
 
     //cup size btn choose
     const onBigCupSize = () => {

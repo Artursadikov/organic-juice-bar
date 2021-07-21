@@ -48,7 +48,6 @@ export default function OrderMain(props) {
     //cup size btn choose
     const onBigCupSize = () => {
         setBigButton(true);
-        setMediumButton(false);
         setSmallButton(false);
         setChooseText('Choose four ingredients');
 
